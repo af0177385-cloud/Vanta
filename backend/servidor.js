@@ -66,7 +66,7 @@ async function eliminar_imagen(ruta_imagen) {
 
 function mensaje(respuesta, dato, status = 200){
     respuesta.setHeader("Content-Type","application/json")
-    respuesta.setHeader("Access-Control-Allow-Origin", "https://vanta-yk7g.onrender.com/producto")
+    respuesta.setHeader("Access-Control-Allow-Origin", "https://vanta-1-zdyl.onrender.com")
     respuesta.statusCode = status
     respuesta.end(JSON.stringify({
         mensaje: dato
@@ -251,7 +251,7 @@ function informacion_recibida(peticion){
 const servidor = http.createServer(async function(peticion,respuesta){
 
     if (peticion.method === "OPTIONS") {
-    respuesta.setHeader("Access-Control-Allow-Origin", "https://vanta-yk7g.onrender.com/producto")
+    respuesta.setHeader("Access-Control-Allow-Origin", "https://vanta-1-zdyl.onrender.com")
     respuesta.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE")
     respuesta.setHeader("Access-Control-Allow-Headers", "Content-Type")
 
