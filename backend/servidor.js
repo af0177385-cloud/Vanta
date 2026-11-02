@@ -512,8 +512,8 @@ const servidor = http.createServer(async function(peticion,respuesta){
     }
 })
 
-servidor.listen(4000,function(){
-    console.log("servidor se activo ruta : http://localhost:4000")
-})
+const puerto = process.env.PORT || 4000
 
-  
+servidor.listen(puerto, function(){
+    console.log("servidor activo en el puerto " + puerto)
+}) 
