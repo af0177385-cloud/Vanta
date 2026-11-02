@@ -16,7 +16,7 @@ let cancelar_producto = document.getElementById("cancelar_producto")
 let tarjetas = document.getElementById("tarjetas")
 
 async function cargar_productos() {
-    const response = await fetch ("http://localhost:4000/productos")
+    const response = await fetch ("https://vanta-yk7g.onrender.com/productos")
     const datos = await response.json()
 
     productos = datos.mensaje
@@ -25,7 +25,7 @@ async function cargar_productos() {
 cargar_productos()
 
 async function guardar_supabase(producto) {
-    const response = await fetch("http://localhost:4000/producto",{
+    const response = await fetch("https://vanta-yk7g.onrender.com/producto",{
         headers: {
             "Content-Type" : "application/json"
         },
@@ -40,7 +40,7 @@ async function guardar_supabase(producto) {
 }
 
 async function eliminar_producto_supabase(id) {
-    const response = await fetch(`http://localhost:4000/producto/${id}`,{
+    const response = await fetch(`https://vanta-yk7g.onrender.com/producto/${id}`,{
         method : "DELETE",
     })
 
@@ -49,7 +49,7 @@ async function eliminar_producto_supabase(id) {
 }
 
 async function enviar_imagen(formulario) {
-    const response = await fetch("http://localhost:4000/imagen_url", {
+    const response = await fetch("https://vanta-yk7g.onrender.com/imagen_url", {
         method: "POST",
         body: formulario
     })
@@ -61,7 +61,7 @@ async function enviar_imagen(formulario) {
 }
 
 async function editar_producto_supabase(id,producto_actulizado) {
-   const response = await fetch(`http://localhost:4000/producto/${id}`,{
+   const response = await fetch(`https://vanta-yk7g.onrender.com/producto/${id}`,{
         headers: {
             "Content-Type": "application/json"
         },
